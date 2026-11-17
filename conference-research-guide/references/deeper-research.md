@@ -1,38 +1,65 @@
 # Deeper research
 
-Read the sections relevant to the user's questions. A track label should not prevent finding evidence in another track.
+Read the sections relevant to the user's questions. Look across tracks when the evidence requires it.
 
 ## Community and working-group material
 
-Resolve the exact group and organization. A conference track, CNCF group, Kubernetes WG, SIG, and vendor community are different entities. Similar names do not establish identity.
+Identify the exact group and organization. A conference track, CNCF group, Kubernetes WG, SIG, and vendor community are different entities. Similar names do not prove they are the same group.
 
-Start from an official community directory or project repository and follow its agenda, minutes, recordings, proposals, and issue links. Check dates and document sections. For each useful item report the discussion topic, status, supporting material, and relevance to the user's goal.
+Start with an official community directory or project repository. Follow links to agendas, minutes, recordings, proposals, and issues.
 
-Distinguish these states: proposed, discussed, accepted, implemented, released, and deprecated. A roadmap presentation or open issue does not establish a completed release. If meeting notes are inaccessible, say so and use inspected public proposals or conference abstracts with their actual evidence level. Do not describe those as conclusions from the unread meeting.
+Check dates and document sections. For each useful item, report the topic, status, supporting material, and relevance.
+
+Keep these states distinct: proposed, discussed, accepted, implemented, released, and deprecated. A roadmap or open issue does not prove a feature shipped.
+
+If meeting notes are inaccessible, say so. Use inspected proposals or abstracts at their actual evidence level. Do not present them as conclusions from an unread meeting.
 
 ## Architecture and industry examples
 
-For a company reference, search that company's engineering publications and its conference speakers. When several matches are plausible, show candidates and explain their differences. Do not silently pick one as the user's intended reference.
+For a company reference, search its engineering publications and conference speakers. If several matches fit, show the candidates and explain their differences. Do not silently choose the intended reference.
 
-Describe each architecture option in terms of the existing bottleneck, the mechanism that changes it, required capabilities, expected tradeoff, and a way to test it. Distinguish mature patterns newly relevant to the workload from emerging proposals. Include current versions or feature gates only after verifying primary documentation.
+Explain each architecture option through:
 
-Keep data/query serving, agent orchestration, and model inference conceptually separate. They may have different caches, consistency requirements, scaling controls, and metrics. Prefix/KV caching of model computation does not replace the backend's data freshness or authorization handling.
+- The existing bottleneck.
+- The mechanism that changes it.
+- Required capabilities.
+- Expected tradeoffs.
+- A way to test it.
+
+Distinguish established patterns from emerging proposals. A mature pattern may become useful for a new workload.
+
+Verify current versions and feature gates in primary documentation before including them.
+
+Keep data serving, agent orchestration, and model inference distinct. Their caches, consistency needs, scaling controls, and metrics may differ.
+
+Model prefix or KV caching does not replace backend data freshness or access controls.
 
 ## Benchmark proposals
 
-Turn relevant material into a falsifiable hypothesis rather than a list of technologies. Specify:
+Turn relevant findings into a hypothesis that a test could disprove. Specify:
 
-- The workload and comparison baseline.
-- The architectural change or controller being evaluated.
-- Independent variables and deliberately fixed conditions.
-- Traffic shape, concurrency, dataset distribution, and warm/cold state.
-- Throughput and latency distributions, correctness, recovery, resource use, and cost measures relevant to that workload.
-- The decision the result will support and what would disprove the hypothesis.
+- Workload and comparison baseline.
+- Architecture change or controller being tested.
+- Variables to change and conditions to keep fixed.
+- Traffic shape, concurrency, data distribution, and warm or cold state.
+- Relevant measures of throughput, latency, correctness, recovery, resource use, and cost.
+- The decision the result supports and what would disprove the hypothesis.
 
-Use identical input replay, comparable hardware and versions, and several repeated runs when appropriate. Record variance rather than relying on a single best run. Separate startup time, steady state, and recovery. Include preparation/indexing costs when moving work off the read path. Do not interpret cross-hardware speedups as software-only gains.
+Use the same input replay and comparable hardware and versions. Repeat runs when appropriate and report variance. Do not rely on one best run.
 
-For autoscaling, identify the component being scaled. HPA, VPA, node autoscalers, engine-managed executors, job admission, and distributed-job scheduling are not interchangeable. Confirm supported combinations and version-specific semantics in primary documentation. Examine conflicts between controllers, scaling delay, oscillation, disruption, and downstream limits.
+Separate startup, steady state, and recovery. Include preparation or indexing costs when moving work off the read path. Hardware differences prevent attributing a speedup solely to software.
 
-For agent-facing read workloads, consider reads and bytes per completed task, fan-out, retries, repeated reads, cache locality, changing data, and permission boundaries. Hold answer/task quality and freshness constraints constant when assessing cost improvements. Label workload multipliers and example traffic levels as illustrative test inputs rather than observed production measurements.
+For autoscaling, identify the component being scaled. HPA, VPA, node autoscalers, engine executors, job admission, and job scheduling serve different purposes.
 
-Prioritize a small set of experiments by fit to the user's workload, evidence quality, implementation effort, and likely decision value. Avoid unsupported numeric ranking or a claim that a suggested experiment is globally novel.
+Verify supported combinations and version-specific behavior in primary documentation. Examine controller conflicts, delays, oscillation, disruption, and downstream limits.
+
+For agent-facing read workloads, consider:
+
+- Reads and bytes per completed task.
+- Fan-out, retries, and repeated reads.
+- Cache locality and changing data.
+- Permission boundaries.
+
+Hold task quality and freshness constraints constant when comparing costs. Label example traffic levels and workload multipliers as illustrative test inputs. They are not observed production measurements.
+
+Prioritize a few experiments by workload fit, evidence, effort, and decision value. Avoid unsupported scores or claims of global novelty.

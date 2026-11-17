@@ -1,7 +1,11 @@
 # Public skill repository
 
-This repository publishes the reusable `conference-research-guide` skill. Keep changes portable and examples generic.
+This repository publishes the reusable `conference-research-guide` skill. Keep its instructions portable and its examples generic.
 
-Keep conference collections, personal questionnaires, downloaded source decks, generated presentations, research notes and implementation work in the user's separate research workspace or repository. Extract reusable workflow lessons into the skill without copying personal research artifacts or configuration.
+Keep personal research in the user's separate workspace or repository. This includes questionnaires, downloaded sources, generated decks, notes, and implementation work.
 
-For skill changes, validate `conference-research-guide/` with the available skill validator and check referenced files. Do not treat a public repository as permission to publish a user's research.
+Bring reusable lessons into the skill. Remove personal details before adding examples.
+
+For skill changes, run the available skill validator. Check that referenced files exist.
+
+A public skill repository does not grant permission to publish a user's research.

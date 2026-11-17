@@ -1,67 +1,89 @@
 # Interaction examples
 
-These examples describe behavior. Titles and technical contexts here are hypothetical and must not be reported as discovered talks.
+These examples show how to respond. Their titles and technical contexts are hypothetical. Do not report them as discovered talks.
 
-## Starting with only an event
+## Starting with an event
 
-User: "Use this skill. List the tracks at ExampleCon 2026."
+User: “Use this skill. List the tracks at ExampleCon 2026.”
 
-Resolve editions. Browse the official program, label the edition whose tracks you show, and ask the user to confirm or choose a different edition. Do not fabricate one universal track list or begin downloads before the scope is clear.
+Identify the editions and browse the official program. Label the edition whose tracks you show. Ask the user to confirm it or choose another.
 
-## Starting with only an interest
+Do not invent a universal track list. Resolve the scope before downloading material.
 
-User: "I want to learn about distributed databases."
+## Starting with an interest
 
-Ask a short question about their purpose or level if necessary. Find a small set of real events or supplied collections and explain why each fits. Let the user choose. Do not require them to know track names or speakers.
+User: “I want to learn about distributed databases.”
+
+Ask about their goal or experience if needed. Find a few real events or supplied collections. Explain why each fits and let the user choose.
+
+The user does not need to know track names or speakers.
 
 ## Expanding beyond a track
 
-User: "I chose the data track, but also want autoscaling, benchmarking, working-group notes, and the architecture Company X presented."
+User: “I chose the data track. Also include autoscaling, benchmarks, working-group notes, and the architecture Company X presented.”
 
-Keep the selected track and broaden the search to the stated topics. Identify plausible Company X talks and clarify ambiguity without blocking other discovery. Look up actual community groups. Separate accessible minutes, proposals, abstracts, and vendor engineering sources. Offer experiments connected to the user's workload.
+Keep the selected track and add the requested topics. Find plausible Company X talks. Clarify ambiguity while continuing independent discovery.
+
+Identify the actual community groups. Distinguish minutes, proposals, abstracts, and vendor engineering sources. Connect proposed experiments to the user's workload.
 
 ## Handling missing material
 
-User: "Summarize the slides for these three talks."
+User: “Summarize the slides for these three talks.”
 
-Two decks download correctly. The third link returns an authentication page. Inspect the two actual decks, record the third gap, and offer abstract/recording coverage or a supplied deck. Do not count the authentication page as a downloaded presentation or attribute abstract text to slides.
+Two decks download correctly. The third link returns a login page.
+
+Inspect the two decks and record the gap. Offer an available recording, abstract-only coverage, or a supplied file.
+
+A login page is not a downloaded presentation. Abstract text does not establish what the slides say.
 
 ## Delegated completion
 
-User: "Choose the strongest material and make the report."
+User: “Choose the strongest material and make the report.”
 
-Use known goals and state any material assumptions. Select, collect, synthesize, and deliver without asking the user to approve each talk or routine step. Keep unsupported claims and unavailable material clearly labeled.
+Use known goals and state important assumptions. Select, collect, explain, and deliver without routine approval questions.
+
+Label unsupported claims and unavailable material clearly.
 
 ## Animated presentation
 
-User: "Make an animated deck from the findings."
+User: “Make an animated deck from the findings.”
 
-Inspect the host's authoring capabilities. Create the requested format when supported. If no format is specified and native authoring is unavailable, explain a browser-deck fallback and proceed. Include actual animations and test them. Keep illustrative workload numbers distinct from measurements.
+Check the host's authoring tools. Create the requested format when supported.
 
-## New user and new host
+If native tools are unavailable and no format was specified, explain the browser-deck fallback. Create and test actual animations.
 
-User installs the shared skill in a different environment.
+Keep example workload numbers distinct from measurements.
 
-Start from their own context. No local path, account, personal system, conference edition, API key, or connector from the author's environment is required. Use available tools, keep state in the task workspace, and explain missing capabilities when they affect the result.
+## New user and host
 
+A user installs the shared skill in a different environment.
 
-## Explaining talks rather than proposing research
+Start with their context and available tools. No account, path, system, conference edition, API key, or connector from the author's environment is required.
 
-User: “Pull in context from the relevant talks, explain it using simpler models and illustrations, and make a deck.”
+Keep research in the task workspace. Explain missing capabilities when they affect the result.
 
-Expected behavior: inventory the relevant sessions, inspect available substantive material, make source briefs, then teach the mechanisms with cited illustrations and stepwise explanations. Label supplemental documentation and unavailable recordings. Proposed benchmarks may appear after the explanations if useful to the user's broader goal.
+## Explaining talks
 
-Failure to avoid: an attractive deck of talk titles, architecture suggestions, and experiments that never explains the talks themselves.
+User: “Pull in the relevant talks. Explain them with simpler models and illustrations, then make a deck.”
 
+Inventory the relevant sessions and inspect substantive source material. Build source briefs, then teach the mechanisms with cited illustrations and stepwise explanations.
+
+Label supplemental documentation and unavailable recordings. Proposed benchmarks may follow if useful to the user's goal.
+
+Avoid a polished deck that lists titles and experiments without explaining the talks.
 
 ## Optional showcase discovery
 
 User: “Research this conference for ideas to optimize our existing data service on Kubernetes.”
 
-Expected behavior: establish the workload and goal, discover relevant talks, and offer the separate Solutions Showcase question when the event has one. While the answer is pending, continue independent talk research. A No excludes product crawling. An explicit request to include showcase products skips a redundant question.
+Establish the workload and goal. Discover relevant talks. If the event has a Solutions Showcase, offer the separate opt-in question.
 
-After a Yes, inspect official listings and available primary product materials. A sponsor's demo of an existing product is classified as an existing-product demonstration unless dated evidence establishes a launch or update. Explain which mechanism could help the user's workload and what would need benchmarking. Do not present sponsorship as proof of technical fit.
+Continue independent talk research while the answer is pending. No excludes product crawling. A direct request to include showcase products already means Yes.
+
+After Yes, inspect official listings and available primary product material. Treat an existing product demo as a demo unless dated evidence proves a launch or update.
+
+Explain the mechanism, possible workload fit, and what needs testing. Sponsorship does not prove technical fit.
 
 User: “Add a Solutions Showcase option to this skill.”
 
-Expected behavior: update the reusable workflow. This is not an opt-in to execute a showcase crawl for the current conference.
+Update the shared workflow. This request does not authorize a showcase crawl for the current conference.

@@ -1,44 +1,71 @@
 # Solutions Showcase research
 
-Read this after the user opts into product and exhibitor research. Apply the same research question, workload, scope, and evidence standards used for conference talks. This is optional research, not a product-buying or deployment workflow.
+Read this after the user opts into product and exhibitor research. Use the same goal, workload, scope, and evidence standards as the talk research.
 
-## Discover what is actually available
+This optional research does not authorize a purchase or deployment.
 
-Start from the correct edition's official exhibitor/sponsor directory, showcase or demo schedule, Project Pavilion, and linked vendor event pages. A sponsorship prospectus describes sponsorship packages; it is not a catalog of products demonstrated or launched.
+## Find the available material
 
-Follow relevant leads to product announcements, release notes, architecture documents, technical guides, demo slides, recordings, and published benchmarks. Verify the event connection. A booth listing establishes participation, not which capabilities were demonstrated. Record unavailable materials and missing technical detail rather than inferring them from a logo.
+Start with the correct edition's official listings. Check exhibitor directories, demo schedules, the Project Pavilion, and linked vendor event pages.
 
-Use available browsing and download tools. Do not promise a complete product catalog when the event provides only a partial directory or selected demo abstracts. Do not require a particular conference platform or vendor connector.
+A sponsorship prospectus describes packages. It does not establish which products were demonstrated or launched.
+
+Follow useful leads to announcements, release notes, architecture documents, technical guides, demo slides, recordings, and benchmarks.
+
+Verify each product's connection to the event. A booth listing proves participation, not which capabilities were demonstrated.
+
+Record missing material and technical details. Do not infer them from a logo.
+
+Use available browsing and download tools. Do not require a specific conference platform or vendor connector.
+
+If listings are partial, describe that coverage limit. Do not promise a complete product catalog.
 
 ## Establish what is new
 
-Classify each relevant finding using the best evidence available:
+Classify each relevant finding using the best available evidence:
 
-- New product launch: a dated primary announcement identifies the new product.
-- New feature or release: an existing product gains a specific, dated capability.
-- Existing-product demonstration: a product is showcased without evidence of an event-related launch or update.
-- Preview or roadmap: announced or demonstrated direction whose availability is not established.
-- Unclear: public material is insufficient to establish novelty or release status.
+- **New product launch:** a dated primary announcement identifies a new product.
+- **New feature or release:** an existing product gains a specific, dated capability.
+- **Existing-product demo:** no evidence establishes an event-related launch or update.
+- **Preview or roadmap:** a direction is shown, but availability is unconfirmed.
+- **Unclear:** public material cannot establish novelty or release status.
 
-Record announcement date, event date, version when given, and availability separately. A product new to the researcher is not automatically newly launched. Do not attribute a later feature to the conference edition. Keep vendor claims, technical documentation, demo evidence, and independent reproduction distinct. Preserve benchmark hardware, workload, baseline, units, and missing conditions.
+Record announcement date, event date, version if given, and availability separately. A product new to the researcher is not necessarily newly launched.
 
-## Evaluate relevance to the user's workload
+Do not attribute a later feature to an earlier conference. Distinguish vendor claims, documentation, demo evidence, and independently reproduced results.
 
-For each useful candidate explain:
+Preserve benchmark hardware, workload, baseline, units, and missing conditions.
 
-- What the product does and the mechanism that could address the user's problem.
-- Where it fits in the current or proposed architecture.
-- Required integration, compatibility evidence, operational changes, and tradeoffs.
+## Assess fit with the user's workload
+
+For each useful candidate, explain:
+
+- What it does and how it could address the problem.
+- Where it fits in the existing or proposed architecture.
+- Integration needs, compatibility evidence, operational changes, and tradeoffs.
 - What remains unverified and what comparison could establish value.
 
-Translate broad claims such as “AI-ready storage” or “automatic right-sizing” into a specific workload question. Do not infer compatibility with a named database or service just because the product supports Kubernetes. Separate backend data-serving improvements from model-serving improvements when agent workloads are involved.
+Turn broad claims into specific workload questions. Examples include “AI-ready storage” and “automatic right-sizing.”
 
-For example, research for a search service might examine whether a storage or sizing product changes query latency, cache behavior, recovery, data movement, resource consumption, or update freshness. These are investigation directions, not proof that the product helps that service. Use the user's actual workload rather than making this example the default.
+Kubernetes support alone does not prove compatibility with a named service or database. For agent workloads, distinguish backend data serving from model serving.
 
-## Deliver findings
+For a search service, investigate query latency, caching, recovery, data movement, resource use, or update freshness. These are research directions, not proof of benefit.
 
-Provide a comparison suited to the user's scope. Useful fields are product/vendor, novelty classification and date, capability and mechanism, workload relevance, evidence inspected with links, tradeoffs, and a proposed benchmark or next question. Keep source claims and your interpretation distinguishable.
+Use the user's actual workload. Do not make the search-service example a default.
 
-Connect selected product findings to the relevant talks and user goal. An explanatory output should teach the mechanism; a decision output should add concrete changes and evaluation criteria. Avoid turning the result into an unfiltered sponsor list or a purchase recommendation based on marketing alone.
+## Deliver the findings
 
-Record the opt-in, scope, findings and coverage gaps in the task workspace using [research-records.md](research-records.md). Do not put task-specific vendor lists or user infrastructure into the installed skill.
+Choose a comparison that fits the scope. Useful fields include:
+
+- Product, vendor, classification, and relevant date.
+- Capability, mechanism, and workload relevance.
+- Inspected evidence and links.
+- Tradeoffs and a proposed test or next question.
+
+Distinguish source claims from your interpretation. Connect useful product findings to the talks and the user's goal.
+
+For explanations, teach how the mechanism works. For decisions, add concrete changes and evaluation criteria.
+
+Avoid an unfiltered sponsor list. Marketing alone cannot support a purchase recommendation.
+
+Record the opt-in, scope, findings, and gaps using [research-records.md](research-records.md). Keep vendor lists and user infrastructure in the task workspace, outside the installed skill.

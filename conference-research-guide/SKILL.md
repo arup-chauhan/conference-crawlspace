@@ -1,99 +1,156 @@
 ---
 name: conference-research-guide
-description: "Research conference talks interactively, explain ideas with simple models and illustrations, optionally investigate Solutions Showcase products, and produce cited reports or presentations. Use for conference research, practical takeaways, architecture comparisons, and benchmark ideas."
+description: "Find conference talks, explain their ideas simply, and create reports or slides with sources. Use for conference research, practical takeaways, architecture comparisons, and benchmark ideas. Includes optional Solutions Showcase research."
 ---
 
 # Conference Research Guide
 
-Turn a conference program into research that answers the user's questions. Support any event, discipline, and experience level. Start with the current conversation and supplied material. Examples in this package illustrate behavior, not default interests or assumed infrastructure.
+Turn conference material into answers to the user's questions. Support any event, subject, or experience level.
+
+Start with the conversation and supplied material. Examples show how to work; they do not define the user's interests or infrastructure.
 
 ## Start with the research question
 
-Identify what is already known: event and edition, topics or tracks, purpose, intended audience, technical context if relevant, and requested outputs. For workload optimization, establish the actual system, whether it is already deployed or being evaluated, the desired improvement, and known constraints. Keep this workload at the center as topics expand. Distinguish learning what the talks explain from choosing an architecture or designing experiments. A request to explain talks calls for educational synthesis; practical interests alone do not turn the deliverable into a benchmark plan. Ask only for information needed next, usually one or two short questions per exchange.
+Establish what is already known:
 
-If the user provides only an event name and year, identify its editions and resolve the relevant one before selecting talks or downloading material. You may show a clearly labeled edition's track list while asking. If they have only a topic, browse for suitable events and offer a few verified options with reasons. Never treat an example from earlier discussion as their real environment.
+- Event and edition.
+- Topics or tracks.
+- Goal and audience.
+- Relevant technical context.
+- Requested output.
 
-Use short, plain language. Offer two or three grounded choices and accept free text. Use the host's question controls if available, or a numbered list. Do not imply that text labels are clickable buttons.
+For optimization work, establish the actual system and whether it is already deployed. Identify the desired improvement and known constraints. Keep that workload central as the topic expands.
 
-Guided mode is the default. Pause at substantive choices about scope, selection, or output. Continue independent discovery when possible, but do not treat silence as consent. When the user delegates choices, asks for all relevant material, or requests immediate completion, state reasonable assumptions and finish without routine approval checkpoints. Existing authorization persists.
+Distinguish learning from architecture decisions and experiment planning. A request to explain talks needs explanations of the source material. Practical interests alone do not make it a benchmark plan.
 
-## Optional Solutions Showcase crawl
+Ask only for information needed next. Usually ask one or two short questions per exchange.
 
-Once the event and research goal are known, offer a separate optional question if the event has a Solutions Showcase, expo, exhibitor program, or equivalent:
+If given only an event name and year, identify its editions. Resolve the edition before choosing talks or downloading material. You may show one edition's track list while asking, with its edition clearly labeled.
+
+If given only a topic, find suitable events. Offer a few verified options and explain their fit. Never treat an earlier example as the user's real environment.
+
+Use short sentences, familiar words, and clear spacing. Offer two or three grounded choices and accept free text. Use the host's question controls when available, or a numbered list. Do not present plain text labels as clickable buttons.
+
+Use guided mode by default. Pause for meaningful choices about scope, selection, or output. Continue independent discovery where possible; silence is not consent.
+
+When the user delegates choices or requests immediate completion, state reasonable assumptions and finish. Do the same when they ask for all relevant material. Avoid routine approval checkpoints. Existing authorization still applies.
+
+## Offer an optional Solutions Showcase crawl
+
+Once the event and goal are known, check for a showcase, expo, or exhibitor program. If one exists, ask separately:
 
 > Would you also like me to crawl the Solutions Showcase for relevant products and announcements?
 
-Use Yes / No choices when the host supports them. Record the choice and do not ask again unless the user changes it. An explicit request to include the showcase already answers Yes; a request to add this option to the skill does not authorize an actual product crawl. Continue talk research independently while the choice is pending.
+Use Yes / No choices when supported. Record the answer. Ask again only if the user changes it.
 
-After an opt-in, read [references/solutions-showcase.md](references/solutions-showcase.md). Research the products against the same user goal as the talks. Distinguish new launches, feature updates, existing-product demos, and previews using dated evidence. Keep advertised claims separate from inspected technical capabilities and independently measured results.
+A direct request to include the showcase already means Yes. A request to add this option to the skill does not authorize a product crawl. Continue talk research while the choice is pending.
 
-## Available capabilities and portability
+After an opt-in, read [solutions-showcase.md](references/solutions-showcase.md). Apply the same research goal to products and talks.
 
-This is a conversational research workflow. It does not install a crawler, run a background service, or create a web application by itself.
+Use dated evidence to distinguish launches, updates, existing demos, and previews. Keep advertised claims separate from inspected capabilities and independently measured results.
 
-- Use the host's browsing/search tools and connected sources where available. No vendor-specific connector or API key is a prerequisite.
-- If live research is unavailable, work with supplied URLs, files, or extracts, and state the coverage limit. Do not imply you crawled an event you could not access.
-- Use available document, PDF, and presentation skills for their respective formats. Do not assume any particular filesystem root, plugin installation, model, or rendering runtime exists.
-- Keep task output in a user-selected workspace or a new task folder. Use portable relative paths within the research collection. Never write a user's research into the installed skill folder. Keep personal research collections separate from a shared skill repository. When improving the reusable skill, carry over generic workflow lessons and sanitized examples rather than a user's notes, configuration or artifacts.
+## Use the tools available
 
-## Maintain scope as the conversation evolves
+This skill provides a conversational research workflow. It does not install a crawler, run a background service, or create an application.
 
-Tracks are a starting point. When the user adds a goal that crosses tracks, follow that goal across the event's relevant sessions. Preserve earlier selections. Add adjacent events, community meetings, papers, or engineering posts when the user requests them or when a specific research gap warrants them. Label the expanded scope and source origin.
+Use the host's browsing tools and connected sources where available. No specific vendor connector or API key is required.
 
-Prefer one focused clarification over making a consequential guess. For an ambiguous organization reference, find plausible matches and label them as candidates while asking for a title, speaker, project, or link. Expand familiar abbreviations when context makes the meaning likely and state the interpretation.
+If live research is unavailable, use supplied links, files, or extracts. Explain the coverage limit. Do not claim to have crawled an inaccessible event.
 
-For a sustained or resumed task, maintain a compact research state and source ledger using [references/research-records.md](references/research-records.md). Keep confirmed choices separate from assumptions, and retain unresolved questions and coverage gaps.
+Use available document, PDF, and presentation skills for those formats. Do not assume a particular local path, plugin, model, or rendering tool exists.
 
-## Discover, recommend, and refine
+Keep outputs in the user's chosen workspace or a new task folder. Use relative paths within the research collection.
 
-Browse the actual event schedule and individual talk pages. Prefer organizer, speaker, maintainer, and project sources. Verify the event edition and record the access date. A schedule page for another year or a redirect to another event does not verify the intended session.
+Keep research separate from the installed skill and shared skill repository. Improve the shared skill using generic lessons and examples with personal details removed.
 
-Inspect abstracts before bulk downloads. In guided selection, present a useful shortlist, usually three to five items. When asked for all relevant talks, build a coverage inventory across the agreed topics and do not treat the shortlist size as a coverage limit. For each candidate record:
+## Follow changes in scope
 
-- Exact title, speaker, edition, and a direct source link.
-- A specific reason it addresses the user's purpose.
-- Listed audience level, or a clearly labeled inference about depth.
-- Evidence inspected and material availability, such as abstract only, slides linked but unchecked, slides inspected, or recording inspected.
+Tracks are a starting point. Follow added goals across relevant sessions while preserving earlier selections.
 
-Do not invent talks, sources, numeric relevance scores, access claims, or popularity claims. An advertised slide link does not mean the deck downloaded or opened successfully. Paraphrase long abstracts and retain the source attribution.
+Include nearby events, community meetings, papers, or engineering posts when requested. Also use them to fill a specific research gap. Label the expanded scope and each source's origin.
 
-Offer actions that move research forward: include/exclude, compare, explain fit, find related material, or change focus. Convert feedback into criteria and show meaningful changes without repeating the full unchanged list. Explain why a complementary item fills a gap.
+Ask a focused question before making a consequential guess. For an ambiguous company reference, find plausible matches and label them as candidates. Ask for a title, speaker, project, or link while continuing independent work.
 
-When working groups, SIGs, community meetings, benchmarking, or architectural upgrades matter, read [references/deeper-research.md](references/deeper-research.md). Do not force technical evaluation onto unrelated conference research.
+Expand abbreviations when their meaning is reasonably clear. State your interpretation.
 
-## Collect and inspect selected material
+For sustained or resumed work, read [research-records.md](references/research-records.md). Keep a compact research state and source ledger. Separate confirmed choices from assumptions. Retain open questions and coverage gaps.
 
-Follow real download links for the selected scope. Preserve original files with readable, collision-safe names. Verify that downloaded bytes form a readable PDF or presentation, rather than a login page or error response. Record the source URL, local relative path, and actual inspection status.
+## Discover and refine the selection
 
-If access fails, record the gap and continue other items. Offer a recording, transcript, abstract-only coverage, or supplied file where useful. Do not bypass access controls or keep retrying an unchanged failure.
+Browse the actual schedule and individual talk pages. Prefer organizer, speaker, maintainer, and project sources.
 
-Use the relevant file-handling capability to inspect slides and notes. Read charts and diagrams visually when their meaning matters. A recording description is not a transcript. An abstract describes intended coverage and does not establish delivered results. Preserve source-specific units, baselines, hardware, versions, and limitations when reporting performance claims.
+Verify the event edition and record the access date. Another year's schedule or an unrelated redirect does not verify a session.
 
-## Explain the material and answer the research question
+Inspect abstracts before bulk downloads. In guided mode, offer a useful shortlist, usually three to five items. For requests covering all relevant talks, build a broader coverage inventory. The shortlist size is not a coverage limit.
 
-For teaching, talk summaries, and explanatory reports or decks, read [references/explain-talks.md](references/explain-talks.md). Build source briefs before drafting the final artifact. Explain the problem, starting system, mechanism, outcome, and limits using substantive source material. Abstracts support selection and advertised scope, not a reconstruction of the delivered talk.
+For each candidate record:
 
-Answer research questions using the material actually inspected. Associate substantive findings with their sources and slide/page/timestamp when reliable. Separate:
+- Exact title, speaker, edition, and direct source link.
+- Why it serves the user's goal.
+- Listed audience level, or a labeled estimate of depth.
+- Available material and what was actually inspected.
 
-- What a speaker, author, or maintainer reports.
+Use clear evidence labels: abstract only, slides linked but unchecked, slides inspected, or recording inspected.
+
+Do not invent talks, sources, relevance scores, access claims, or popularity claims. A slide link does not prove the file downloaded or opened. Paraphrase long abstracts and preserve attribution.
+
+Offer useful next actions: include, exclude, compare, explain fit, or find related material. Turn feedback into selection criteria. Show meaningful changes without repeating an unchanged list.
+
+Explain the gap filled by a complementary source. When working groups, SIGs, architecture upgrades, or benchmarking matter, read [deeper-research.md](references/deeper-research.md). Avoid forcing technical evaluation onto unrelated research.
+
+## Collect and inspect material
+
+Follow real download links for the selected scope. Save originals with readable names that avoid collisions.
+
+Verify that each download is a readable PDF or presentation. A login page or error response is not a deck. Record the URL, relative local path, and inspection status.
+
+If access fails, record the gap and continue with other material. Where useful, offer a recording, transcript, abstract-only coverage, or a supplied file. Do not bypass access controls or repeat an unchanged failure.
+
+Use the relevant tools to inspect slides and notes. Read diagrams and charts visually when their meaning matters.
+
+A recording description is not a transcript. An abstract describes planned coverage, not verified talk content.
+
+For performance claims, preserve units, baselines, hardware, versions, and limitations.
+
+## Explain the ideas and answer the question
+
+For teaching, summaries, reports, or decks, read [explain-talks.md](references/explain-talks.md). Build source briefs before drafting the output.
+
+Use substantive source material to explain the problem, starting system, mechanism, outcome, and limits. Abstracts support selection; they cannot reconstruct a delivered talk.
+
+Link substantive findings to reliable source pages, slides, or timestamps. Keep these distinct:
+
+- What the speaker or author reports.
 - What you infer across sources.
-- What you propose the user should test or try.
+- What you propose testing or trying.
 
-Connect related talks after explaining their individual contributions. Use simple models and illustrations to show causal steps, with analogy boundaries where they matter. Keep proposed upgrades or experiments secondary unless those are the requested main output. Explain agreements, disagreements, prerequisites, and missing evidence when they affect understanding or a decision. Do not claim an idea is globally novel because it is new to the user. Compare a proposed upgrade against the user's baseline, or label the baseline as an assumption.
+Explain each source's contribution before connecting talks. Use simple models and illustrations to show how the mechanism works. State where an analogy stops being accurate.
 
-## Produce and deliver artifacts
+Keep upgrades and experiments secondary unless they are the requested main output. Explain disagreements, prerequisites, and missing evidence when they affect understanding or decisions.
 
-Propose a brief editable outline in guided mode. If the user already asked for immediate creation or delegated the outline, proceed with a suitable structure. Honor requested format and audience. Without a format preference, offer a Word report or use Markdown as a lightweight preview.
+An idea new to the user is not necessarily globally novel. Compare upgrades with the user's baseline. If that baseline is assumed, label it.
 
-Use [references/deliverables.md](references/deliverables.md) for reports, benchmark plans, and presentations. Check the available authoring and animation capabilities before promising a format. If a capability is unavailable, explain the limitation and provide a practical alternative that preserves the user's objective.
+## Create and deliver the output
 
-Deliver links to the completed artifacts and collected originals, with a short coverage statement and material limitations. Verify local files open and references resolve. Review semantic coverage as well as file validity: can the reader explain what each covered speaker did, how it works, and what remains uncertain? A polished artifact about future research does not satisfy a request to explain inspected talks. Describe only actions actually completed. Do not publish, message others, or create an external shared resource unless that action is authorized.
+In guided mode, propose a brief outline the user can edit. If they requested immediate creation or delegated the outline, proceed.
+
+Honor the requested format and audience. Without a format preference, offer Word or use Markdown for a simple preview.
+
+Read [deliverables.md](references/deliverables.md) for reports, benchmark plans, and presentations. Check available authoring and animation tools before promising a format.
+
+If a tool is unavailable, explain the limit. Provide a practical alternative that serves the same goal.
+
+Deliver links to completed outputs and collected originals. Include a short coverage statement and material limitations. Verify that local files open and references resolve.
+
+Check meaning as well as file validity. Can the reader explain what each covered speaker did, how it works, and what remains uncertain? A polished plan for future research does not replace explanations of inspected talks.
+
+Report only completed actions. Publish, message others, or create an external shared resource only when authorized.
 
 ## Starting examples
 
-- "Use $conference-research-guide for [event URL]. Help me choose talks about [topic] and make a concise report."
-- "Use $conference-research-guide to find architecture ideas and benchmarks from [event and edition], including relevant working-group discussions."
-- "Use $conference-research-guide on these supplied slides. Compare their approaches and make an animated presentation if the available tools support it."
-- "Use $conference-research-guide. I am new to [topic]. Suggest conferences, explain the options, and guide me through the choices."
+- “Use $conference-research-guide for [event URL]. Help me choose talks about [topic] and make a concise report.”
+- “Use $conference-research-guide for [event and edition]. Find architecture ideas, benchmark approaches, and relevant working-group discussions.”
+- “Use $conference-research-guide on these slides. Compare the approaches and make an animated presentation.”
+- “Use $conference-research-guide. I am new to [topic]. Suggest conferences and guide me through useful choices.”
 
-For realistic interaction examples, read [references/examples.md](references/examples.md) when adapting the workflow or checking its behavior.
+Read [examples.md](references/examples.md) when adapting the workflow or checking its behavior.
