@@ -60,6 +60,16 @@ Keep your decks, notes, questionnaires, and downloaded sources in a separate wor
 
 This public repository contains the reusable skill and generic examples.
 
-## Contribute
+## Contributing
 
-Improve the shared workflow or add generic examples. Keep personal research, third-party decks, credentials, and private configuration out of contributions.
+Contributions are welcome. Fork the repository and submit a pull request.
+
+Useful improvements include:
+
+- Clearer instructions and examples.
+- Better talk selection and source checks.
+- Improvements to reports, slides, and optional showcase research.
+
+Explain what changed, why it helps, and how you checked it.
+
+Keep examples generic. Leave personal research, third-party decks, credentials, and private configuration out of contributions.
