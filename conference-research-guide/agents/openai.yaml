@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Research Guide"
+  short_description: "Explore talks and turn evidence into useful artifacts"
+  default_prompt: "Use $conference-research-guide to explore a conference or topic, recommend relevant material, help me refine the scope, and create a cited research artifact."
